@@ -1,13 +1,14 @@
 n = input("Enter a word or phrase")
 l = len(n)
 j = l-1
-c = 0
+c = True
 for i in range(0, l//2):
     if n[j] != n[i]:
         print(n, "is not a palindrome")
+        c = False
         break
     else:
-        c += 1
+        c = True
     j -= 1
-if c == l//2:
+if c == True:
     print(n, "is a palindrome")
